@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Upload URL</title>
+	<script type="text/javascript">
+		function changeDirImage(){
+			document.getElementById('InstImg').src="Images/DirUrl.png"
+		}
+
+		function changeImdbImage(){
+			document.getElementById('InstImg').src="Images/ImdbUrl.png"
+		}
+
+		function changeBackImage(){
+			document.getElementById('InstImg').src="Images/BackImg.png"
+		}
+
+		function changeCoverImage(){
+			document.getElementById('InstImg').src="Images/CoverImg.png"
+		}
+
+		function changeColorImage(){
+			document.getElementById('InstImg').src="Images/ColorIMG.png"
+		}
+	</script>
+</head>
+<body style="margin:0px;background:url('Images/disp2.jpg');background-size:cover;">
+
+<div style="width:100%;height:750px;background-color:rgba(0,0,0,0.7);overflow-y:hidden;">
+
+	<div style="width:80%;height:600px;margin:auto;margin-top:5%;background-color:#ffffff;display:flex;border:1px solid #ffffff;box-shadow: 0px 0px 20px 5px #000000">
+
+		<div style="flex:wrap;width:50%;border-right:1px solid black">
+			<div style="padding:2% 10% 2% 10%">
+				<form action="SaveAllEpisodes.php" method="POST" enctype="multipart/form-data">
+						<h2 style="text-align:center;">ENTER DIRECTORY OF FILE</h2>
+						<input type="text" name="Direct" style="width:100%;padding:10px" onclick="changeDirImage()">
+
+						<h2 style="text-align:center;">ENTER THE IMDB URL</h2>
+						<input type="text" name="ImdbUrl" style="width:100%;padding:10px" onclick="changeImdbImage()">
+
+						<h2 style="text-align:center;">SELECT BACKGROUND IMAGE</h2>
+						<input type="file" name="BackImg" style="width:100%;padding:10px" onclick="changeBackImage()">
+
+						<h2 style="text-align:center;">SELECT COVER IMAGE</h2>
+						<input type="file" name="CoverImg" style="width:100%;padding:10px" onclick="changeCoverImage()">
+
+						<h2 style="text-align:center;">SELECT THEME COLOR</h2>
+						<input type="text" name="ColorImg" style="width:100%;padding:10px" onclick="changeColorImage()">
+
+						<br>
+						<br>
+						<center><input type="submit" name="submit"></center>
+				</form>
+			</div>
+		</div>
+
+		<div style="flex:wrap;width:50%;">
+			<img id="InstImg" src="Images/DirUrl.png" style="width:100%;height:600px">
+		</div>
+
+	</div>
+	
+</div>
+
+</body>
+</html>
